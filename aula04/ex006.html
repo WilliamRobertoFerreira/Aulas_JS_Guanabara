@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de teste</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div#area{
+            background-color: blueviolet;
+            font: normal 15pt Arial;
+            color: white;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interajir
+    </div>
+    <script>
+        var area_documento = window.document.getElementById('area')
+        area_documento.addEventListener('mouseenter',entrar_area)
+        area_documento.addEventListener('mouseleave', sair_area)
+        area_documento.addEventListener('click',clicar_area)
+        function entrar_area(){
+            area_documento.innerText = 'Entrou'
+            area_documento.style.color = 'white'
+            area_documento.style.background = 'black'
+        }
+        function sair_area(){
+            area_documento.innerText='Saiu'
+            area_documento.style.background='blueviolet'
+        }
+        function clicar_area(){
+            area_documento.innerText='Clicou'
+            area_documento.style.background='green'
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão conteúdo ex007 aula10</title>
+    <style>
+        body{
+            background-color: #000000;
+            color: white;
+            font: normal 15px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+    <input type="number" name="txtNumeroUm" id="txtn1"> + 
+    <input type="number" name="txtNumeroDois" id="txtn2">
+    <input type="button" value="somar" onclick=somar_numeros()>
+    
+    <script>
+        function somar_numeros(){
+            var n1_txtbx = document.getElementById('txtn1')
+            var n2_txtbx = document.getElementById('txtn2')
+            var n1 = Number(n1_txtbx.value)
+            var n2 = Number(n2_txtbx.value)
+            var soma = n1 + n2
+            window.alert(`A soma entre ${n1} e ${n2} é: ${soma}`)
+            
+        }
+    </script>
+    
+</body>
+</html>
