@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body{
+            background-color: black;
+            font: normal 15px Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você está dentro da velocidade permitida? </h1>
+    <input type="number" name="velocidade" id="veloci">
+    <input type="button" value="verificar" onclick=testar_velocidade()>
+
+    <script>
+        function testar_velocidade(){
+            var velo_txtbx = window.document.getElementById('veloci')
+            var velo = Number(velo_txtbx.value)
+            if (velo > 60){
+                window.alert(`velocidade: ${velo}`)
+                window.alert('Você está acima da velocidade permitida, multado!')
+            }else{
+                window.alert(`velocidade: ${velo}`)
+                window.alert('Parabéns, dentro da velocidade permitida')
+            }
+            window.alert('Sempre use o cinto de segurança!')
+        }
+    </script>
+    
+</body>
+</html>
